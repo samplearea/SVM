@@ -1,0 +1,12 @@
+xx, yy = np.meshgrid(np.linspace(-3, 3, 500), np.linspace(-3, 3, 500))
+np.random.seed(0)
+X = np.random.randn(300, 2)
+y = np.logical_xor(X[:, 0] > 0, X[:, 1] > 0)
+
+_, ax = plt.subplots(2, 2, figsize=(8, 8))
+args = dict(long_title=False, support_vectors=False)
+plot_training_data_with_decision_boundary("linear", ax[0, 0], **args)
+plot_training_data_with_decision_boundary("poly", ax[0, 1], **args)
+plot_training_data_with_decision_boundary("rbf", ax[1, 0], **args)
+plot_training_data_with_decision_boundary("sigmoid", ax[1, 1], **args)
+plt.show()

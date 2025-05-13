@@ -1,0 +1,4 @@
+plot_training_data_with_decision_boundary("linear")
+plot_training_data_with_decision_boundary("sigmoid")
+plot_training_data_with_decision_boundary("rbf")
+plot_training_data_with_decision_boundary("poly")
